@@ -13,7 +13,6 @@ functions :func:`~bmi.info.BmiInfo.get_input_var_names` or
 
 # Arguments
 -------
-
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
@@ -61,7 +60,6 @@ Get memory use for each array element in bytes.
 
 # Arguments
 ----------
-
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
@@ -73,11 +71,11 @@ function get_var_itemsize(model::BmiBase, var_name::String)
 end
 
 
-"""Get size, in bytes, of the given variable.
+"""
+Get size, in bytes, of the given variable.
 
 # Arguments
 ----------
-
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
@@ -90,11 +88,11 @@ function get_var_nbytes(model::BmiBase, var_name::String)
 end
 
 
-"""Get grid identifier for the given variable.
+"""
+Get grid identifier for the given variable.
 
 # Arguments
 ----------
-
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
