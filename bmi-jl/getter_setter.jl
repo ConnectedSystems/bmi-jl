@@ -1,5 +1,6 @@
-#! /usr/bin/env julia
 """Interface for getting and setting a model's internal variables."""
+
+include("base.jl")
 
 """Get a copy of values of the given variable.
 

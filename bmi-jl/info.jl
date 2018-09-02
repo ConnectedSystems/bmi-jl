@@ -1,4 +1,3 @@
-#! /usr/bin/env julia
 """Interface that describes a model and it's input and output variables.
 
 Get metadata about a model.
