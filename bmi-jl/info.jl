@@ -7,7 +7,7 @@
 
 """Name of the component.
 
-Returns
+Return the name of the component
 -------
 str
   The name of the component.
@@ -19,7 +19,7 @@ Notes
     /* C */
     int get_component_name(void * self, char * name);
 """
-function get_component_name(model::BmiBase):
+function get_component_name(model::BmiBase)::String
     return model.name
 end
 
