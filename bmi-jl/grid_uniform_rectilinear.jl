@@ -22,7 +22,9 @@ grid values to be associated with the nodes or with the cells.
 """
 
 
-"""Get dimensions of the computational grid.
+"""
+Get dimensions of the computational grid.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
@@ -39,7 +41,8 @@ function get_grid_shape(grid::BmiGrid, grid_id::Int)
 end
 
 
-"""Get distance between nodes of the computational grid.
+"""
+Get distance between nodes of the computational grid.
 
 # Arguments
 ----------
@@ -57,7 +60,8 @@ function get_grid_spacing(grid::BmiGrid, grid_id::Int)
 end
 
 
-"""Get coordinates for the origin of the computational grid.
+"""
+Get coordinates for the origin of the computational grid.
 
 # Arguments
 ----------

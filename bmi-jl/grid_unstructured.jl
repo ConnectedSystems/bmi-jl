@@ -11,7 +11,9 @@ Methods that describe an unstructured grid.
 include("grid.jl")
 
 
-"""Get coordinates of grid nodes in the streamwise direction.
+"""
+Get coordinates of grid nodes in the streamwise direction.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
@@ -28,7 +30,9 @@ function get_grid_x(grid::BmiGrid, grid_id::Int)
 end
 
 
-"""Get coordinates of grid nodes in the transverse direction.
+"""
+Get coordinates of grid nodes in the transverse direction.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
@@ -45,7 +49,8 @@ function get_grid_y(grid::BmiGrid, grid_id::Int)
 end
 
 
-"""Get coordinates of grid nodes in the normal direction.
+"""
+Get coordinates of grid nodes in the normal direction.
 
 # Arguments
 ----------
@@ -63,7 +68,9 @@ function get_grid_z(grid::BmiGrid, grid_id::Int)
 end
 
 
-"""Get connectivity array of the grid.
+"""
+Get connectivity array of the grid.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
@@ -80,7 +87,9 @@ function get_grid_connectivity(grid::BmiGrid, grid_id::Int)
 end
 
 
-"""Get offsets for the grid nodes.
+"""
+Get offsets for the grid nodes.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
