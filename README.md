@@ -1,5 +1,8 @@
 # bmi-jl
 
-Work in progress Julia implementation of the [Basic Modeling Interface](https://github.com/csdms/bmi)
+Work in progress [Basic Modeling Interface](https://github.com/csdms/bmi)
+template for Julialang.
 
-Based on v0.1 of the BMI documentation.
+Based on [v0.1](https://bmi-spec.readthedocs.io/en/latest/) of the BMI
+documentation and the
+[Python implementation](https://github.com/csdms/bmi-python)
