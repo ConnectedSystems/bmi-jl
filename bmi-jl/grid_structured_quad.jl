@@ -10,7 +10,9 @@ Methods that describe a structured grid of quadrilaterals.
     :alt: An example of a structured quad grid.
 """
 
-"""Get dimensions of the computational grid.
+"""
+Get dimensions of the computational grid.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
@@ -29,6 +31,7 @@ end
 
 """
 Get coordinates of grid nodes in the streamwise direction.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
@@ -47,6 +50,7 @@ end
 
 """
 Get coordinates of grid nodes in the transverse direction.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
@@ -65,6 +69,7 @@ end
 
 """
 Get coordinates of grid nodes in the normal direction.
+
 # Arguments
 ----------
 - `grid_id::Int` : A grid identifier.
