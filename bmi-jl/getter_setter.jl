@@ -7,24 +7,15 @@ This is a getter for the model, used to access the model's
 current state. It returns a *copy* of a model variable, with
 the return type, size and rank dependent on the variable.
 
-Parameters
-----------
-var_name : str
-  An input or output variable name, a CSDMS Standard Name.
-
-Returns
+# Arguments
 -------
-array_like
-  The value of a model variable.
+- `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
-Notes
------
-.. code-block:: c
-
-    /* C */
-    int get_value(void * self, const char * var_name, void * buffer);
+# Returns
+-------
+A copy of the model variable value.
 """
-function get_value(model::BmiBase, var_name::AbstractString)
+function get_value(model::BmiBase, var_name::String)
     return deepcopy(get_value_ref(model, var_name))
 end
 
@@ -35,56 +26,35 @@ This is a getter for the model, used to access the model's
 current state. It returns a reference to a model variable,
 with the return type, size and rank dependent on the variable.
 
-Parameters
-----------
-var_name : str
-  An input or output variable name, a CSDMS Standard Name.
+# Arguments
 
-Returns
+- `var_name::String`: An input or output variable name, a CSDMS Standard Name.
+
+# Returns
 -------
-array_like
-  A reference to a model variable.
 
-Notes
------
-.. code-block:: c
-
-    /* C */
-    int get_value_ref(void * self, const char * var_name,
-                      void ** buffer);
+Return a reference to a model variable.
 """
-function get_value_ref(model::BmiBase, var_name)
+function get_value_ref(model::BmiBase, var_name::String)
     return getfield(model, var_name)
 end
 
 
 """Get values at particular indices.
 
-Parameters
-----------
-var_name : str
-  An input or output variable name, a CSDMS Standard Name.
-indices : array_like
-  The indices into the variable array.
-
-Returns
+# Arguments
 -------
-array_like
-    Value of the model variable at the given location.
 
-Notes
------
-.. code-block:: c
+- `var_name::String`: An input or output variable name, a CSDMS Standard Name.
+- `indices`: array_like, the indices into the variable array.
 
-    /* C */
-    int get_value_at_indices(void * self, const char * var_name,
-                             void * buffer, int * indices, int len);
+# Returns
+-------
+
+Value(s) of the model variable at the given location.
 """
-function get_value_at_indices(model::BmiBase, var_name, indices)
+function get_value_at_indices(model::BmiBase, var_name::String, indices)
 end
-
-# Setters
-
 
 """Specify a new value for a model variable.
 
@@ -93,41 +63,23 @@ current state. It accepts, through *src*, a new value for a
 model variable, with the type, size and rank of *src*
 dependent on the variable.
 
-Parameters
-----------
-var_name : str
-  An input or output variable name, a CSDMS Standard Name.
-src : array_like
-  The new value for the specified variable.
-
-Notes
------
-.. code-block:: c
-
-    /* C */
-    int set_value(void * self, const char * var_name, void * src);
+# Arguments
+-------
+- `var_name::String`: An input or output variable name, a CSDMS Standard Name.
+- `src`: The new value for the specified variable.
 """
-function set_value(model::BmiBase, var_name, src)
+function set_value(model::BmiBase, var_name::String, src)
 end
 
 """Specify a new value for a model variable at particular indices.
 
-Parameters
-----------
-var_name : str
-  An input or output variable name, a CSDMS Standard Name.
-indices : array_like
-  The indices into the variable array.
-src : array_like
-  The new value for the specified variable.
+# Arguments
+-------
 
-Notes
------
-.. code-block:: c
+- `var_name::String`: An input or output variable name, a CSDMS Standard Name.
+- `indices`: array_like, thei indices into the variable array.
+- `src`: array_like, The new value for the specified variable.
 
-    /* C */
-    int set_value_at_indices(void * self, const char * var_name,
-                             int * indices, int len, void * src);
 """
-function set_value_at_indices(model::BmiBase, var_name, indices, src)
+function set_value_at_indices(model::BmiBase, var_name::String, indices, src)
 end
