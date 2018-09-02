@@ -9,11 +9,13 @@ the return type, size and rank dependent on the variable.
 
 # Arguments
 -------
+
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
 -------
 A copy of the model variable value.
+
 """
 function get_value(model::BmiBase, var_name::String)
     return deepcopy(get_value_ref(model, var_name))
@@ -34,6 +36,7 @@ with the return type, size and rank dependent on the variable.
 -------
 
 Return a reference to a model variable.
+
 """
 function get_value_ref(model::BmiBase, var_name::String)
     return getfield(model, var_name)
@@ -52,6 +55,7 @@ end
 -------
 
 Value(s) of the model variable at the given location.
+
 """
 function get_value_at_indices(model::BmiBase, var_name::String, indices)
 end
@@ -65,8 +69,10 @@ dependent on the variable.
 
 # Arguments
 -------
+
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 - `src`: The new value for the specified variable.
+
 """
 function set_value(model::BmiBase, var_name::String, src)
 end

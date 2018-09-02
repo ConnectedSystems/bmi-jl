@@ -9,7 +9,9 @@ time is 0.
 
 # Returns
 -------
+
 float: The model start time.
+
 """
 function get_start_time(model::BmiBase)
 end
@@ -20,10 +22,12 @@ Current time of the model.
 
 # Returns
 -------
+
 float: The current model time.
 
 # See Also
 --------
+
 - get_start_time
 """
 function get_current_time(model::BmiBase)
@@ -35,10 +39,12 @@ End time of the model.
 
 # Returns
 -------
+
 float: The maximum model time.
 
 See Also
 --------
+
 get_start_time
 """
 function get_end_time(model::BmiBase)
@@ -53,6 +59,7 @@ step is 1.0.
 
 # Returns
 -------
+
 float: The time step used in model.
 """
 function get_time_step(model::BmiBase)
@@ -64,6 +71,7 @@ Time units of the model.
 
 # Returns
 -------
+
 float: The model time unit; e.g., `days` or `s`.
 
 
