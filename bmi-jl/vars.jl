@@ -38,6 +38,7 @@ area.
 
 # Arguments
 ----------
+
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
@@ -60,11 +61,13 @@ Get memory use for each array element in bytes.
 
 # Arguments
 ----------
+
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
 -------
 Int: Item size in bytes.
+
 """
 function get_var_itemsize(model::BmiBase, var_name::String)
 end
@@ -74,6 +77,7 @@ end
 
 # Arguments
 ----------
+
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
@@ -90,6 +94,7 @@ end
 
 # Arguments
 ----------
+
 - `var_name::String`: An input or output variable name, a CSDMS Standard Name.
 
 # Returns
@@ -98,6 +103,7 @@ Int: The grid identifier.
 
 See Also
 --------
+
 bmi.info.BmiInfo.get_input_var_names : Get *var_name* from this
     method or from :func:`~bmi.info.BmiInfo.get_output_var_names`.
 

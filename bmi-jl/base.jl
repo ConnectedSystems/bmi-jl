@@ -69,6 +69,7 @@ printing reports.
 
 # Arguments
 -------
+
 - `time_frac`: numeric, a model time fraction value.
 
 """
