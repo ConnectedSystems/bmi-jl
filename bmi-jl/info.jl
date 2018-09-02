@@ -1,38 +1,32 @@
 #! /usr/bin/env julia
-"""Interface that describes a model and it's input and output variables."""
+"""Interface that describes a model and it's input and output variables.
+
+Get metadata about a model.
+"""
 
 
-"""Get metadata about a model."""
+"""
+Name of the component.
 
-
-"""Name of the component.
-
-Return the name of the component
+# Returns
 -------
-str
-  The name of the component.
-
-Notes
------
-.. code-block:: c
-
-    /* C */
-    int get_component_name(void * self, char * name);
+String: the name of the component
 """
 function get_component_name(model::BmiBase)::String
     return model.name
 end
 
 
-"""List of a model's input variables.
+"""
+List of a model's input variables.
 
 Input variable names must be CSDMS Standard Names, also known
 as *long variable names*.
 
-Returns
+# Returns
 -------
-list of str
-  The input variables for the model.
+The input variables for the model.
+
 
 Notes
 -----
@@ -43,13 +37,6 @@ framework to automatically connect components.
 
 Standard Names do not have to be used within the model.
 
-Notes
------
-.. code-block:: c
-
-    /* C */
-    int get_input_var_name_count(void * self, int * count);
-    int get_input_var_names(void * self, char ** names);
 """
 function get_input_var_names(model::BmiBase):
 end
@@ -60,22 +47,15 @@ end
 Output variable names must be CSDMS Standard Names, also known
 as *long variable names*.
 
-Returns
+# Returns
 -------
-list of str
-  The output variables for the model.
+The output variables for the model.
 
-See Also
+
+# See Also
 --------
+
 get_input_var_names
-
-Notes
------
-.. code-block:: c
-
-    /* C */
-    int get_output_var_name_count(void * self, int * count);
-    int get_output_var_names(void * self, char ** names);
 """
 function get_output_var_names(model::BmiBase):
 end
